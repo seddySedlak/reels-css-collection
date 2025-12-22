@@ -1,0 +1,127 @@
+:root {
+    --bg-color: #161616;       /* Tmavé pozadí */
+    --card-bg: #212121;        /* Pozadí karty/řádků */
+    --text-main: #fcfcfc;      /* Hlavní bílý text */
+    --text-muted: #cfcfcf;     /* Šedý text pro podnadpisy */
+    --accent-blue: #006dff;    /* Tvoje modrá (aktivní stav) */
+    --circle-inactive: #464646; /* Tmavá modro-šedá (neaktivní stav) */
+    --card-bg-active: #2c2c2c;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: "League Spartan", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.card {
+    width: 100%;
+    max-width: 480px;
+}
+h1 {
+    font-size: 36px; 
+    font-weight: 600; 
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.subtitle {
+    text-align: center; 
+    color: var(--text-muted); 
+    font-size: 24px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding: 18px 20px;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+.row:hover {
+    background-color: var(--card-bg-active);
+    transition: background-color 0.25s cubic-bezier(0.4, 0.0, 0.2, 1), 
+                transform 0.25s cubic-bezier(0.4, 0.0, 0.2, 1),
+                box-shadow 0.25s ease;
+}
+.code {
+    font-family: 'Fira Code', monospace;
+    font-size: 15px;
+    color: var(--text-main);
+}
+.circles {
+    display: flex;
+    gap: 8px;
+}
+.circles span {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background-color: var(--circle-inactive);
+    display: block;
+    transition: background-color 0.25s cubic-bezier(0.4, 0.0, 0.2, 1), 
+                transform 0.25s cubic-bezier(0.4, 0.0, 0.2, 1),
+                box-shadow 0.25s ease;
+}
+/* 1. :first-child */
+#chs-first:hover .circles span:first-child {
+    background-color: var(--accent-blue);
+    transform: scale(1.15);
+    box-shadow: 0 0 12px rgba(0, 123, 255, 0.5);
+}
+/* 2. :last-child */
+#chs-last:hover .circles span:last-child {
+    background-color: var(--accent-blue);
+    transform: scale(1.15);
+    box-shadow: 0 0 12px rgba(0, 123, 255, 0.5);
+}
+/* 3. :nth-child(2) */
+#chs-nth-2:hover .circles span:nth-child(2) {
+    background-color: var(--accent-blue);
+    transform: scale(1.15);
+    box-shadow: 0 0 12px rgba(0, 123, 255, 0.5);
+}
+/* 4. :nth-last-child(2) */
+#chs-nth-last-2:hover .circles span:nth-last-child(2) {
+    background-color: var(--accent-blue);
+    transform: scale(1.15);
+    box-shadow: 0 0 12px rgba(0, 123, 255, 0.5);
+}
+/* 5. :nth-child(odd) */
+#chs-odd:hover .circles span:nth-child(odd) {
+    background-color: var(--accent-blue);
+    transform: scale(1.15);
+    box-shadow: 0 0 12px rgba(0, 123, 255, 0.5);
+}
+/* 6. :nth-child(even)  */
+#chs-even:hover .circles span:nth-child(even) {
+    background-color: var(--accent-blue);
+    transform: scale(1.15);
+    box-shadow: 0 0 12px rgba(0, 123, 255, 0.5);
+}
+/* 7. :nth-child(3n) */
+#chs-3n:hover .circles span:nth-child(3n) {
+    background-color: var(--accent-blue);
+    transform: scale(1.15);
+    box-shadow: 0 0 12px rgba(0, 123, 255, 0.5);
+}
+/* 8. :nth-child(n+3) */
+#chs-n3:hover .circles span:nth-child(n+3) {
+    background-color: var(--accent-blue);
+    transform: scale(1.15);
+    box-shadow: 0 0 12px rgba(0, 123, 255, 0.5);
+}
