@@ -25,7 +25,7 @@ body {
 }
 .card {
     width: 100%;
-    max-width: 480px;
+    max-width: 400px;
 }
 h1 {
     font-size: 36px; 
@@ -69,7 +69,8 @@ h1 {
     gap: 8px;
 }
 .circles span {
-    width: 20px; height: 20px;
+    width: 20px; 
+    height: 20px;
     border-radius: 50%;
     background-color: var(--circle-inactive);
     display: block;
