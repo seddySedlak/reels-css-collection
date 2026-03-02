@@ -1,0 +1,150 @@
+:root {
+    --bg-color: #161616;
+    --card-bg: #212121;
+    --card-bg-active: #2c2c2c;
+    --text-main: #fcfcfc;
+    --text-muted: #cfcfcf;
+    --accent-blue: #006dff;
+
+    --syntax-selector: #d7ba7d; 
+    --syntax-property: #9cdcfe; 
+    --syntax-value: #ce9178;    
+    --syntax-punct: #d4d4d4;    
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: "League Spartan", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    width: 100%;
+    max-width: 420px;
+}
+h1 {
+    font-size: 36px; 
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.subtitle {
+    text-align: center; 
+    color: var(--text-muted); 
+    font-size: 24px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.explanation {
+    font-size: 15px;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.4;
+}
+.highlight-text {
+    color: var(--text-main);
+    font-weight: 700;
+    background-color: rgba(0, 109, 255, 0.2);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.demo-section {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.code-window {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+.code-header {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: left;
+}
+.file-name {
+    font-family: 'Fira Code', monospace;
+    font-size: 13px;
+    color: var(--text-muted);
+    opacity: 0.8;
+}
+.code-content {
+    padding: 16px;
+    font-family: 'Fira Code', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.s-sel { color: var(--syntax-selector); font-weight: 500; }
+.s-prop { color: var(--syntax-property); margin-left: 1.5rem; }
+.s-val { color: var(--syntax-value); }
+.s-punc { color: var(--syntax-punct); }
+
+/* --- MAIN DEMO STYLING --- */
+.white-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    height: 250px;
+    overflow-y: scroll;
+    position: relative;
+    border: 2px solid var(--card-bg);
+}
+.white-card::-webkit-scrollbar { width: 8px; }
+.white-card::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 0 12px 12px 0; }
+.white-card::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 8px; }
+.tall-content {
+    height: 400px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    gap: 80px;
+}
+.scroll-hint {
+    color: #888;
+    font-weight: 700;
+    font-size: 16px;
+}
+.bg-box {
+    width: 90%;
+    height: 125px;
+    border-radius: 8px;
+    background-image: url('https://images.unsplash.com/photo-1771926623926-a644527a40dc?q=80&w=1500&auto=format&fit=crop');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- MAIN EFFECT: SCROLL VS FIXED --- */
+.bg-scroll { 
+    background-attachment: scroll; 
+}
+.bg-fixed { 
+    background-attachment: fixed;
+}
+.overlay-text {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    backdrop-filter: blur(4px);
+}

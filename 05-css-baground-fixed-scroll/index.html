@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Background Attachment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=League+Spartan:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <p class="subtitle">CSS KNOWLEDGE #05</p>
+        <h1>CSS BACKGROUND</h1>
+        <div class="demo-section">
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="file-name">style.css</div>
+                </div>
+                <div class="code-content">
+                    <span class="s-sel">.bg-scroll</span> <span class="s-punc">{</span><br>
+                    <span class="s-prop">background-attachment</span><span class="s-punc">:</span> <span class="s-val">scroll</span><span class="s-punc">;</span><br>
+                    <span class="s-punc">}</span>
+                </div>
+            </div>
+            <div class="white-card">
+                <div class="tall-content">
+                    <div class="scroll-hint">👇 Scroll down</div>
+                    <div class="bg-box bg-scroll">
+                        <div class="overlay-text">This bg is scrollable</div>
+                    </div>
+                    <div class="scroll-hint">Keep scrolling...</div>
+                </div>
+            </div>
+            <p class="explanation">The <span class="highlight-text">background moves</span> along with the content when scrolling.</p>
+        </div>
+        <div class="demo-section">
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="file-name">style.css</div>
+                </div>
+                <div class="code-content">
+                    <span class="s-sel">.bg-fixed</span> <span class="s-punc">{</span><br>
+                    <span class="s-prop">background-attachment</span><span class="s-punc">:</span> <span class="s-val">fixed</span><span class="s-punc">;</span><br>
+                    <span class="s-punc">}</span>
+                </div>
+            </div>
+            <div class="white-card">
+                <div class="tall-content">
+                    <div class="scroll-hint">👇 Scroll down</div>
+                    <div class="bg-box bg-fixed">
+                        <div class="overlay-text">This bg is fixed</div>
+                    </div>
+                    <div class="scroll-hint"">Keep scrolling...</div>
+                </div>
+            </div>
+            <p class="explanation">The <span class="highlight-text">background stays fixed</span> in place while the content scrolls over it.</p>
+        </div>
+    </div>
+</body>
+</html>
